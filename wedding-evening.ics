@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nawaporn and Pharuj//Dinner Celebration//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTAMP:20260905T000000Z
+UID:wedding-dinner-20261114@nawaporn-pharuj
+DTSTART;TZID=Asia/Bangkok:20261114T170000
+SUMMARY:Dinner Celebration of Nawaporn and Pharuj
+DESCRIPTION:Dinner celebration at 5 P.M.
+LOCATION:Sailom Sangdad Homey Studio, Bangkok
+END:VEVENT
+END:VCALENDAR

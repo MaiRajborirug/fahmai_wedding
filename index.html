@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta
+      name="description"
+      content="The wedding celebration of Nawaporn and Pharuj on 14 November 2026."
+    >
+    <title>Nawaporn &amp; Pharuj — Our Wedding</title>
+    <link
+      rel="preload"
+      href="./assets/tf-srivichai-regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    >
+    <link rel="preload" href="./assets/hero.png" as="image">
+    <link rel="stylesheet" href="./styles.css?v=20260906-7">
+    <script src="./wedding-config.js" defer></script>
+    <script src="./script.js?v=20260906-7" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="home" aria-label="Nawaporn and Pharuj">
+        <img class="hero__art" src="./assets/hero.png" alt="Illustration of the couple celebrating">
+        <img
+          class="hero__names reveal reveal--up"
+          src="./assets/names.png"
+          alt="Nawaporn and Pharuj"
+        >
+      </section>
+
+      <section class="couple section-pad" id="couple" aria-label="The bride and groom">
+        <img
+          class="section-art section-art--couple reveal reveal--up"
+          src="./assets/couple-heading.png"
+          alt="The bride and groom"
+          loading="lazy"
+        >
+        <div class="couple__grid">
+          <figure class="person reveal reveal--left">
+            <img
+              class="person__photo"
+              src="./assets/bride.jpg"
+              alt="Nawaporn"
+              loading="lazy"
+            >
+            <img
+              class="person__name"
+              src="./assets/bride-name.png"
+              alt="Bride — Nawaporn"
+              loading="lazy"
+            >
+          </figure>
+          <figure class="person reveal reveal--right">
+            <img
+              class="person__photo"
+              src="./assets/groom.jpg"
+              alt="Pharuj"
+              loading="lazy"
+            >
+            <img
+              class="person__name"
+              src="./assets/groom-name.png"
+              alt="Groom — Pharuj"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section
+        class="invitation section-pad"
+        id="program"
+        aria-label="Wedding date and countdown"
+      >
+        <img
+          class="invitation__celebrate reveal reveal--up"
+          src="./assets/celebrate.png"
+          alt=""
+          loading="lazy"
+        >
+        <img
+          class="invitation__together reveal reveal--up"
+          src="./assets/together.png"
+          alt="Let's celebrate together on our special day"
+          loading="lazy"
+        >
+        <img
+          class="invitation__date reveal reveal--up"
+          src="./assets/date.png"
+          alt="14 November 2026"
+          loading="lazy"
+        >
+        <div
+          class="countdown reveal reveal--up"
+          aria-live="polite"
+          aria-label="Time until the wedding"
+        >
+          <div class="countdown__unit" data-unit="weeks">
+            <span>0</span><strong>weeks</strong>
+          </div>
+          <div class="countdown__unit" data-unit="days">
+            <span>0</span><strong>days</strong>
+          </div>
+          <div class="countdown__unit" data-unit="hours">
+            <span>0</span><strong>hours</strong>
+          </div>
+          <div class="countdown__unit" data-unit="minutes">
+            <span>0</span><strong>min</strong>
+          </div>
+          <div class="countdown__unit" data-unit="seconds">
+            <span>0</span><strong>sec</strong>
+          </div>
+        </div>
+        <a class="pill-button reveal reveal--up" id="calendar-link" href="./wedding.ics" download>
+          Add to calendar
+        </a>
+      </section>
+
+      <section class="schedule section-pad" aria-label="Wedding schedule">
+        <img
+          class="section-art section-art--schedule reveal reveal--up"
+          src="./assets/schedule-heading.png"
+          alt="Schedule"
+          loading="lazy"
+        >
+        <div
+          class="schedule__photo reveal reveal--up"
+          role="img"
+          aria-label="The couple together"
+        ></div>
+        <img
+          class="schedule__image reveal reveal--up"
+          id="schedule-details"
+          src="./assets/schedule_morning.png"
+          alt="ลำดับพิธีงานเช้า"
+          loading="lazy"
+        >
+      </section>
+
+      <section class="gallery section-pad" id="gallery" aria-labelledby="gallery-title">
+        <h2 id="gallery-title">Gallery</h2>
+        <div class="carousel reveal reveal--up" aria-roledescription="carousel">
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="gallery-track"></div>
+          </div>
+          <button
+            class="carousel__button carousel__button--prev"
+            type="button"
+            aria-label="Previous photo"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button
+            class="carousel__button carousel__button--next"
+            type="button"
+            aria-label="Next photo"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <div
+            class="carousel__dots"
+            id="gallery-dots"
+            aria-label="Choose a gallery photo"
+          ></div>
+        </div>
+      </section>
+
+      <section class="rsvp section-pad" id="rsvp" aria-label="RSVP">
+        <img
+          class="section-art section-art--rsvp reveal reveal--up"
+          src="./assets/rsvp-heading.png"
+          alt="RSVP"
+          loading="lazy"
+        >
+        <div class="rsvp__grid">
+          <div class="rsvp__copy reveal reveal--up">
+            <p lang="th">
+              <strong><em>
+                “เพื่อให้เราสามารถ<!--
+                -->วางแผนในการดูแลท่าน<!--
+                --> ซึ่งเป็นแขกคนสำคัญ<!--
+                -->ได้อย่างเต็มที่<!--
+                --> ขอรบกวนทุกท่าน<!--
+                -->ทำแบบตอบรับการเข้าร่วมงาน<!--
+                -->ให้เราด้วยนะคะ/ครับ”
+              </em></strong>
+            </p>
+            <p class="rsvp__hope"><em>Hope to see you at our wedding</em></p>
+            <a
+              class="pill-button"
+              id="rsvp-link"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              <span lang="th">
+                กดเพื่อลงทะเบียน<!--
+                -->เข้าร่วมงาน (งานเช้า)
+              </span>
+            </a>
+          </div>
+          <img
+            class="rsvp__photo reveal reveal--up"
+            src="./assets/rsvp-photo.jpg"
+            alt="Nawaporn and Pharuj"
+            loading="lazy"
+          >
+        </div>
+      </section>
+
+      <div id="venues"></div>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Invitation sections">
+      <a class="mobile-nav__link is-active" href="#home">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 21s-8-4.8-8-11a4.5 4.5 0 0 1 8-2.8
+              A4.5 4.5 0 0 1 20 10c0 6.2-8 11-8 11Z"
+          />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a class="mobile-nav__link" href="#program">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M6 2v3m12-3v3M4 8h16M5 4h14a1 1 0 0 1 1 1v15
+              H4V5a1 1 0 0 1 1-1Zm3 8h2m4 0h2m-8 4h2m4 0h2"
+          />
+        </svg>
+        <span>Program</span>
+      </a>
+      <a class="mobile-nav__link" href="#gallery">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 5h16v14H4zM4 16l5-5 4 4 2-2 5 5M15 9h.01"/>
+        </svg>
+        <span>Gallery</span>
+      </a>
+      <a class="mobile-nav__link" href="#location">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0
+              Zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+          />
+        </svg>
+        <span>Location</span>
+      </a>
+      <a
+        class="mobile-nav__link mobile-nav__link--instagram"
+        id="instagram-link"
+        href="https://www.instagram.com/fahnmai/"
+        target="_blank"
+        rel="noopener"
+        aria-label="ติดต่อบ่าวสาวบน Instagram"
+        data-tooltip="ติดต่อบ่าวสาว"
+      >
+        <img src="./assets/instagram-black.png" alt="">
+        <span>Contact</span>
+      </a>
+    </nav>
+  </body>
+</html>

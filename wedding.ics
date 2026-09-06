@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nawaporn and Pharuj//Wedding//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTAMP:20260903T034829Z
+UID:wedding-20261114@nawaporn-pharuj
+DTSTART;TZID=Asia/Bangkok:20261114T070000
+SUMMARY:The Wedding of Nawaporn and Pharuj
+DESCRIPTION:Wedding ceremony at 7 A.M. at Wat Ratchanatdaram
+ Worawihan. Reception at 9 A.M. at Methavalai Residence Hotel.
+LOCATION:Wat Ratchanatdaram Worawihan\, Bangkok
+END:VEVENT
+END:VCALENDAR
