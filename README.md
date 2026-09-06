@@ -13,6 +13,7 @@ npm run dev
 Then open <http://localhost:4173>.
 
 - Morning celebration: <http://localhost:4173/>
+- Morning celebration alias: <http://localhost:4173/morning.html>
 - Dinner celebration: <http://localhost:4173/evening.html>
 
 For font sizes, line spacing, word spacing, and section spacing, see
@@ -42,5 +43,11 @@ Update `wedding.ics` at the same time if the date or event description changes.
 
 ## Publish with GitHub Pages
 
-In the repository settings, open **Pages**, choose **Deploy from a branch**, then select the branch
-and `/ (root)`. All links are relative, so the site works from a project subdirectory.
+In the repository settings, open **Pages**, choose **Deploy from a branch**, then select `main` and
+`/ (root)`. All links are relative, so the site works from a project subdirectory.
+
+- Morning celebration: <https://mairajborirug.github.io/fahmai_wedding/>
+- Morning alias: <https://mairajborirug.github.io/fahmai_wedding/morning.html>
+- Dinner celebration: <https://mairajborirug.github.io/fahmai_wedding/evening.html>
+
+`morning.html` redirects to the root morning page so there is only one source file to maintain.
