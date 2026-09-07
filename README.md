@@ -4,24 +4,29 @@ A self-contained, mobile-first wedding invitation based on the original Manita W
 It uses local copies of the couple's artwork and photos, so the published site does not depend on
 the organizer's WordPress server.
 
-## Preview locally
+The site content lives in [`fahmai-wedding/`](./fahmai-wedding/). The root
+[`index.html`](./index.html) just redirects to it, and [`CNAME`](./CNAME) points the custom domain
+at this repo.
+
+## Run it locally
 
 ```sh
 npm run dev
 ```
 
-Then open <http://localhost:4173>.
+This starts `python3 -m http.server 4173` from the repo root. Then open:
 
-- Morning celebration: <http://localhost:4173/>
-- Morning celebration alias: <http://localhost:4173/morning.html>
-- Dinner celebration: <http://localhost:4173/evening.html>
+- Morning celebration: <http://localhost:4173/fahmai-wedding/>
+- Morning celebration alias: <http://localhost:4173/fahmai-wedding/morning.html>
+- Dinner celebration: <http://localhost:4173/fahmai-wedding/evening.html>
 
 For font sizes, line spacing, word spacing, and section spacing, see
 [`TYPOGRAPHY_GUIDE.md`](./TYPOGRAPHY_GUIDE.md).
 
 ## Edit wedding information
 
-Most frequently changed details are in [`wedding-config.js`](./wedding-config.js):
+Most frequently changed details are in
+[`fahmai-wedding/wedding-config.js`](./fahmai-wedding/wedding-config.js):
 
 - `weddingDate` controls the live countdown.
 - `rsvpUrl` controls the RSVP button.
@@ -29,25 +34,36 @@ Most frequently changed details are in [`wedding-config.js`](./wedding-config.js
 - `instagramUrl` controls the black Instagram icon beside Location in the bottom navigation.
 - `venues` controls both venue names, addresses, map embeds, and Google Maps links.
 
-Dinner-only changes are in [`wedding-config-evening.js`](./wedding-config-evening.js). The dinner
-page inherits the shared gallery and contact details, then overrides its countdown, RSVP link, and
-single venue.
+Dinner-only changes are in
+[`fahmai-wedding/wedding-config-evening.js`](./fahmai-wedding/wedding-config-evening.js). The
+dinner page inherits the shared gallery and contact details, then overrides its countdown, RSVP
+link, and single venue.
 
 The visual wedding date is still an artwork file. Replace it while keeping the same filename to
 update it without touching the layout:
 
-- `assets/date.png`
-- `assets/schedule_morning.png` for the complete morning schedule artwork.
+- `fahmai-wedding/assets/date.png`
+- `fahmai-wedding/assets/schedule_morning.png` for the complete morning schedule artwork.
 
-Update `wedding.ics` at the same time if the date or event description changes.
+Update `fahmai-wedding/wedding.ics` (and `wedding-evening.ics`) at the same time if the date or
+event description changes.
 
-## Publish with GitHub Pages
+## Update the deployed website
 
-In the repository settings, open **Pages**, choose **Deploy from a branch**, then select `main` and
-`/ (root)`. All links are relative, so the site works from a project subdirectory.
+The live site is served by GitHub Pages from the `main` branch (repository **Settings → Pages**,
+source `Deploy from a branch`, branch `main`, folder `/ (root)`), at the custom domain in `CNAME`:
+<https://www.seeu14nov26.site>.
 
-- Morning celebration: <https://mairajborirug.github.io/fahmai_wedding/>
-- Morning alias: <https://mairajborirug.github.io/fahmai_wedding/morning.html>
-- Dinner celebration: <https://mairajborirug.github.io/fahmai_wedding/evening.html>
+To publish a change:
+
+```sh
+git add <files>
+git commit -m "..."
+git push origin main
+```
+
+GitHub Pages rebuilds automatically a minute or two after the push lands on `main` — no separate
+deploy step or build process. Check progress under the repo's **Actions** tab (`pages build and
+deployment`) or **Settings → Pages**.
 
 `morning.html` redirects to the root morning page so there is only one source file to maintain.

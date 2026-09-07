@@ -380,7 +380,7 @@ main {
 }
 
 .rsvp__copy {
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0 15px 30px;
   text-align: center;
 }
@@ -626,7 +626,7 @@ main {
 
 @media (min-width: 850px) {
   .section-art--couple {
-    width: 35%;
+    width: 60%;
   }
 
   .couple {
@@ -643,12 +643,12 @@ main {
 
   .invitation__celebrate {
     margin-top: 48px;
-    width: 13.3333%;
+    width: 30.0%;
   }
 
   .invitation__together,
   .invitation__date {
-    width: 33.3333%;
+    width: 45%;
   }
 
   .countdown {
@@ -684,6 +684,14 @@ main {
 
   .rsvp__photo {
     width: calc(100% - 60px);
+  }
+
+  .rsvp__copy {
+    font-size: 1.6rem;
+  }
+
+  .rsvp__copy p {
+    max-width: 540px;
   }
 
   .venue {
