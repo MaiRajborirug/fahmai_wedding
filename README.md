@@ -50,9 +50,10 @@ event description changes.
 
 ## Update the deployed website
 
-The live site is served by GitHub Pages from the `main` branch (repository **Settings → Pages**,
-source `Deploy from a branch`, branch `main`, folder `/ (root)`), at the custom domain in `CNAME`:
-<https://www.seeu14nov26.site>.
+The live site is served by GitHub Pages, built and deployed by the
+[`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml) GitHub Actions
+workflow on every push to `main` (repository **Settings → Pages**, source `GitHub Actions`), at
+the custom domain in `CNAME`: <https://www.seeu14nov26.site>.
 
 To publish a change:
 
@@ -62,8 +63,7 @@ git commit -m "..."
 git push origin main
 ```
 
-GitHub Pages rebuilds automatically a minute or two after the push lands on `main` — no separate
-deploy step or build process. Check progress under the repo's **Actions** tab (`pages build and
-deployment`) or **Settings → Pages**.
+The workflow runs automatically a minute or two after the push lands on `main` — no separate
+deploy step or build process. Check progress under the repo's **Actions** tab (`Deploy Pages`).
 
 `morning.html` redirects to the root morning page so there is only one source file to maintain.
